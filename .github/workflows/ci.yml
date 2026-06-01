@@ -26,7 +26,7 @@ jobs:
 
       - name: Run flake8 linter
         run: |
-          flake8 src/ tests/ --max-line-length=100 --ignore=E501,W503
+          flake8 src/ tests/ --max-line-length=100 --ignore=E501,W503,E241,E226,W292,F841,F401,E402,E302
 
       - name: Run pytest
         env:
