@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  credit-risk-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_ALLOW_FILE_STORE=true
+    volumes:
+      - ./mlruns:/app/mlruns
+    restart: unless-stopped
